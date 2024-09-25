@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+  </head>
+
+  <body>
+    <div class="login-dark">
+      <form method="post">
+        <h2 style="text-align: center">Shipment Management Form</h2>
+        <!-- <div class="illustration">
+          <i class="icon ion-ios-locked-outline"></i>
+        </div> -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="sno"
+            id="sno"
+            placeholder="Shipment-No."
+            onchange="getShipment()"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Description"
+          />
+        </div>
+        <!-- Source -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="source"
+            id="source"
+            placeholder="Source"
+          />
+        </div>
+        <!-- Destination -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="destination"
+            id="destination"
+            placeholder="Destination"
+          />
+        </div>
+        <!-- Shipping-Date -->
+        <div class="form-group">
+          <label for="shipping_date">Shipping-Date</label>
+          <input
+            type="date"
+            id="shipping_date"
+            class="form-control date-input"
+            name="shipping_date"
+            placeholder="dd-mm-yyyy"
+            value=""
+            min="1997-01-01"
+            max="2030-12-31"
+          />
+        </div>
+        <!-- Expected-Delivery-Date -->
+        <div class="form-group">
+          <label for="expected_delivery_date">Expected-Delivery-Date</label>
+          <input
+            class="form-control date-input"
+            type="date"
+            name="expected_delivery_date"
+            id="expected_delivery_date"
+            placeholder="Expected-Delivery-Date"
+          />
+        </div>
+        <div class="form-group">
+          <button
+            class="btn btn-primary btn-block"
+            id="save-btn"
+            type="button"
+            onclick="addShipment()"
+            disabled
+          >
+            Save
+          </button>
+        </div>
+        <div class="form-group">
+          <button
+            class="btn btn-primary btn-block"
+            id="change-btn"
+            type="button"
+            onclick="changeShipment()"
+            disabled
+          >
+            Change
+          </button>
+        </div>
+        <div class="form-group">
+          <button
+            class="btn btn-primary btn-block"
+            id="reset-btn"
+            type="button"
+            onclick="resetForm()"
+            disabled
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
